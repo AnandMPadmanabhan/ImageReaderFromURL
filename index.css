@@ -1,0 +1,80 @@
+html,body{
+    border-radius: 15px;
+    margin: 0px;
+    min-width: 400px;
+    min-height: 200px;
+}
+
+#header{
+    background-color: darkcyan;
+    text-align: center;
+    color: white;
+    overflow: auto;
+}
+h3{
+    margin:0px;
+}
+#content{
+    text-align: center;
+
+}
+
+img{
+    max-width: 100px;
+    max-height: 100px;
+}
+#readBtn{
+    visibility: hidden;
+}
+button{
+    margin-top: 2px;
+    background-color: darkcyan;
+    border: 1px solid white ;
+    color:white;
+    border-radius: 10px;
+    width: 80%;
+    height:15%;
+}
+
+button:hover {
+    background-color: #59328b;
+    color: white;
+  }
+#loading{
+    padding: 0%;
+    margin: 0%;
+    color: darkred;
+}
+#progress{
+    margin: 0%;
+    width: 80%;
+    margin-left:10%;
+    margin-top: 5px;
+    display:none;
+    height:auto; 
+}
+#progressBar{
+    border-radius: 10px;
+    width:0%;
+    margin-top: 0%;
+    padding:0%;
+}
+#imgText{
+    border-radius: 10px;
+    margin-top: 2px;
+    width: 80%;
+    visibility: hidden;
+    height: 0px;
+}
+#imgAddrtxt{
+    border-radius: 10px;
+    border:1px solid darkcyan;
+    margin-top: 2px;
+    width: 80%;
+}
+#copyBtn{
+    visibility: hidden;
+    height: 0px;
+}
+
+

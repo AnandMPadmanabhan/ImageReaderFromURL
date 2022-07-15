@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta http-equiv="Content-Security-Policy" content="worker-src blob:; default-src * data: 'unsafe-eval' 'unsafe-inline' blob:"> -->
+    <meta http-equiv="Content-Security-Policy" content="script-src *;">
+    <meta http-equiv="Content-Security-Policy" content="script-src-elem *;">
+    <meta http-equiv="Content-Security-Policy" 
+    content="
+    worker-src 'self' 'unsafe-inline' * blob:;
+      child-src blob: gap:;
+      img-src * 'self' data: https:;
+      default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <!-- <meta http-equiv="content-security-policy" content="default-src 'none'; script-src 'self';
+  connect-src 'self'; img-src * 'self';
+  style-src 'self' 'sha256-CwE3Bg0VYQOIdNAkbB/Btdkhul49qZuwgNCMPgNY5zw=';" /> -->
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="header">
+        <h3>Image Reader</h3>
+    </div>
+    <div id="content">
+        <img src="ocr.png" id="showImg"><br>
+        <label for="imgAddr">Copy image address and paste here:</label><br>
+        <input type="text" id="imgAddrtxt" placeholder="Paste image address from current page"><br>
+        <button type="submit" id="readBtn">READ TEXT</button>
+        <div id="progress">
+            <p id="loading"></p>
+            <div id="progressBar" class="w3-container w3-red w3-center">0%</div>
+        </div>
+        <textarea id="imgText" name="story" rows="5" cols="33" disabled>
+</textarea>
+        <button type="submit" id="copyBtn">
+            COPY TO CLIPBOARD
+        </button>
+    </div>
+
+    <script src="tesseract.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
